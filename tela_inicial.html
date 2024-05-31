@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmatech - Gerenciamento de Pacientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 60px;
+            background-color: #7c4dff;
+            padding-top: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar img {
+            border-radius: 50%;
+            width: 40px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f9;
+            border-bottom: 1px solid #ddd;
+        }
+        .header button {
+            background-color: #7c4dff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .main {
+            display: flex;
+            padding: 20px;
+        }
+        .main .patient-list, .main .patient-details {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .main .patient-list {
+            width: 40%;
+            margin-right: 20px;
+        }
+        .main .patient-details {
+            width: 60%;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-bar input, .search-bar select {
+            margin-right: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .patient-card {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            align-items: center;
+            cursor: pointer;
+        }
+        .patient-card:hover {
+            background-color: #f9f9f9;
+        }
+        .patient-details h2 {
+            margin-top: 0;
+        }
+        .patient-details .actions button {
+            margin-right: 10px;
+        }
+        .patient-details .actions button.active {
+            background-color: #e0e0e0;
+        }
+        .patient-details .info {
+            display: flex;
+            justify-content: space-between;
+        }
+        .patient-details .info div {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="profile.jpg" alt="Profile">
+        <a href="#">🏠</a>
+        <a href="#">📋</a>
+        <a href="#">💊</a>
+        <a href="#">📧</a>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>Patients</h1>
+            <div>
+                <button>New transaction</button>
+                <button>New patient</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="patient-list">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for patient">
+                    <select>
+                        <option>Within a month</option>
+                    </select>
+                    <select>
+                        <option>Alphabetical (A-Z)</option>
+                    </select>
+                </div>
+                <div class="patient-card">
+                    <span>Ada Otunga</span>
+                    <span>👩</span>
+                </div>
+                <div class="patient-card">
+                    <span>Bamidele Abimbola</span>
+                    <span>👨</span>
+                </div>
+                <div class="patient-card">
+                    <span>Chima Achebe</span>
+                    <span>👨</span>
+                </div>
+                <!-- Add more patient cards here -->
+            </div>
+            <div class="patient-details">
+                <h2>Ada Otunga</h2>
+                <div class="actions">
+                    <button class="active">Follow up</button>
+                    <button>Set refill</button>
+                    <button>New consultation</button>
+                </div>
+                <div class="info">
+                    <div>
+                        <h3>Status</h3>
+                        <button>Normal</button>
+                        <button>Urgent</button>
+                        <h3>Appointment type</h3>
+                        <button>Offline</button>
+                        <button>Telephone</button>
+                        <button>Online</button>
+                        <h3>Pharmacist</h3>
+                        <select>
+                            <option>Nia Kimathi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Contacts</h3>
+                        <p>Home Address: 2264 Mark Street, Koloti, Limpopo, South Africa 0709</p>
+                        <p>Phone number: 085 590 6587</p>
+                        <p>Email: adaotunga@email.com</p>
+                        <h3>Medical information</h3>
+                        <p>Pregnant</p>
+                    </div>
+                </div>
+                <button>Send to pharmacist</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
